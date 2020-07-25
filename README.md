@@ -9,7 +9,7 @@ A simple test PDF generation.
 - Watermark
 
 ```bash
-curl https://pdffactory-func.azurewebsites.net/api/PdfHelloWorld
+curl https://<function-app-name>.azurewebsites.net/api/PdfHelloWorld
 ```
 
 ## PdfFromUrl
@@ -17,9 +17,9 @@ curl https://pdffactory-func.azurewebsites.net/api/PdfHelloWorld
 Generate PDF from specified URL
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -v -d '{"url":"https://docs.microsoft.com/zh-tw/"}' https://pdffactory-func.azurewebsites.net/api/PdfFromUrl 
+curl -X POST -H "Content-Type: application/json" -v -d '{"url":"https://docs.microsoft.com/zh-tw/"}' https://<function-app-name>.azurewebsites.net/api/PdfFromUrl 
 
-curl -v https://pdffactory-func.azurewebsites.net/api/PdfFromUrl?url=https://docs.microsoft.com/zh-tw/
+curl -v https://<function-app-name>.azurewebsites.net/api/PdfFromUrl?url=https://docs.microsoft.com/zh-tw/
 ```
 
 ## PdfFromHtml
@@ -27,5 +27,5 @@ curl -v https://pdffactory-func.azurewebsites.net/api/PdfFromUrl?url=https://doc
 Generate PDF from request body  (HTML)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -v -d '<h1>Hello World... now what?</h1>' https://pdffactory-func.azurewebsites.net/api/PdfFromHtml
+curl -X POST -H "Content-Type: application/json" -v -d '<h1>Hello World... now what?</h1>' https://<function-app-name>.azurewebsites.net/api/PdfFromHtml
 ```
